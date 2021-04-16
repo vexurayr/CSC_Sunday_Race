@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="controlCodeCottonV1.js"></script>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <title>
+    Cart Command
+  </title>
+</head>
+
+<body>
+
+  <br>
+  <br>
+  <div class="center"><button class="longButton" onclick="driveForwardXSec();">Go Forward for .25 Seconds</button></div>
+  
+  <div class="center"><button class="button" onclick="allStop();">All Stop</button></div>
+  
+  <div class="center"><button class="turnButton" onclick="limitedLeftTurn();">Turn Left</button>
+    <button class="button2" onclick="limitedRightTurn();">Turn Right</button> </div>
+  
+  <div class="center"><button class="turnButton" onclick="leftTurnReverse();">Turn Left Rev</button>
+    <button class="button2" onclick="rightTurnReverse();">Turn Right Rev</button> </div>
+  
+  <div class="center"><button class="longButton" onclick="driveReverseXSec();">All Reverse for .25 Seconds</button></div>
+  
+  <div class="center"><button class="completeTrackButton" onclick="completeTrack();">Complete Track</button>
+
+  <script>
+    //function to post in api
+
+  </script>
+  <script>
+  function completeTrack() {
+  driveForwardXSec();
+  setTimeout(function () {
+    limitedRightTurn();
+  }, 500);
+  
+  setTimeout(function () {
+    limitedLeftTurn();
+  }, 750);
+  
+  setTimeout(function () {
+    allStop();
+  }, 1000);
+}
+  </script>
+</body>
+
+</html>
